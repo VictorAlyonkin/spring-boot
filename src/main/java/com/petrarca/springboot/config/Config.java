@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 public class Config {
 
     @Bean
-    @ConditionalOnProperty(prefix = "netology.profile", name = "dev", havingValue = "dev")
+    @ConditionalOnProperty(prefix = "netology.profile", name = "dev", havingValue = "dev", matchIfMissing = true)
     public SystemProfile devProfile() {
         return new DevProfile();
     }
